@@ -20,19 +20,19 @@ public class ApplicationRunner {
         BeneficiaryServiceImpl BeneficiaryService = new BeneficiaryServiceImpl(new BeneficiaryFileBased());
         List<Beneficiary> Beneficiarys = BeneficiaryService.findAll();
 
-        System.out.println(Beneficiarys);
+        LOGGER.info(Beneficiarys);
 
         var beneficiary = new Beneficiary("678", "ANDRES", "PEREZ");
         var newBeneficiary = BeneficiaryService.save(beneficiary);
 
-        System.out.println(newBeneficiary);
+        LOGGER.info(newBeneficiary);
 
         System.out.println(BeneficiaryService.findAll());
 
         String nameToSearch = "pepe";
         List<Beneficiary> foundBeneficiaries = searchByName(Beneficiarys, nameToSearch);
         for (Beneficiary foundBeneficiary : foundBeneficiaries) {
-            System.out.println(foundBeneficiary);
+            LOGGER.info(foundBeneficiary);
         }
     }
 }

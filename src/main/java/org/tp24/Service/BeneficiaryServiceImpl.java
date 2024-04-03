@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.tp24.data.Beneficiary;
+import org.tp24.exception.BeneficiaryException;
 import org.tp24.exception.BeneficiaryNotFoundException;
 import org.tp24.exception.SavingBeneficiaryException;
 import org.tp24.repository.BeneficiaryRepository;
@@ -20,7 +21,7 @@ public class BeneficiaryServiceImpl {
     }
 
 
-    public List<Beneficiary> findAll() throws BeneficiaryNotFoundException
+    public List<Beneficiary> findAll() throws BeneficiaryException
     {
         var Beneficiarys= beneficiaryRepository.findAll();
         if (Beneficiarys.isEmpty())
@@ -30,7 +31,7 @@ public class BeneficiaryServiceImpl {
         return Beneficiarys;
     }
 
-    public Beneficiary save(Beneficiary beneficiary) throws SavingBeneficiaryException {
+    public Beneficiary save(Beneficiary beneficiary) throws BeneficiaryException {
         Optional<Beneficiary> optBeneficiary = beneficiaryRepository.save(beneficiary);
 
         return optBeneficiary.orElseThrow(() -> new SavingBeneficiaryException(beneficiary));
