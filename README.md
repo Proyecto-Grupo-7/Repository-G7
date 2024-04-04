@@ -1,46 +1,4 @@
-= Lab
+Una aplicación donde los restaurantes, supermercados y otros establecimientos pueden publicar alimentos que estén próximos a su fecha de vencimiento o excedentes de producción. Las organizaciones benéficas y los bancos de alimentos pueden acceder a esta plataforma para recoger los alimentos y distribuirlos a las personas necesitadas.
 
-____
-
-*_NOTA:_* Al finalizar este laboratorio las búsquedas de clientes aun no estarán programadas. 
-____
-
-#### Objetivo: 
-Aplicar conceptos de OO
-
-#### Descripción general del proyecto:
-
-Realizar la búsqueda de clientes de acuerdo a diferentes criterios
-
-
-#### Instrucciones:
-
-El proyecto esta definido con Java 17. Verifique que versión tiene instalada y actualice la configuración en el pom.xml
-
-0.  Configuración de dependencias
-   1. Incluya las dependencias de las librerias para la **generación de logs**
-   2. Adicione un logger a la clase ApplicationRunner
-   3. Adiccione un log al método run de la clase ApplicationRunner. Este log solo notifica que la aplicación ha sido ejecutada exitosamente.
-   4. Incluya las dependencias de las librerias para **pruebas**
-   5. Cree un caso de pruebas para el método run de la clase ApplicationRunner
-   6. Ejecute el caso de prueba y confirme que el mensaje del log se muestra correctamente
-   
-1. Estructura de datos para clientes con los siguientes atributos
-   1. Numero de cedula
-   2. Nombres
-   3. Apellidos
-   4. Fecha de nacimiento
-   5. Direccion
-   6. Cupo maximo
-
-3. Cree excepciones para los siguientes eventos 
-   1. no se encontraron clientes que correspondan a nombres y apellidos
-   2. no se encontraron clientes con cupos máximos al valor ingresado 
-   3. no se encontró al cliente identificado con la cédula indicada 
-   
-4. Interfaz para el repositorio de clientes con los metodos para
-   1. buscar clientes por nombres y apellidos
-   2. buscar clientes con cupo maximo mayor o igual a un valor ingresado
-   3. buscar al cliente segun el numero de identificación 
-
+Link diagrama: https://www.plantuml.com/plantuml/png/lLN1QXin4BthAtHS4wyFfISJGc98Gi0aO1zB3vFTiJfKAosIR69S_tjtGnkFaHH13jPHyzxJcpTQxQqFuCAsqqBqqFm6XT8wDGlzj-_o8EIm6WtUoxk-rzH086jMMsFGZTL_gvRBbyV7-zLSBgrIw3uALx83CXKuvUTo7HmPzUFdP2vtbjftq56m8nPeS4CDWTkVYLFxdyms3NIOs1w4mdEgTCNbgvFaz4nf6WbCc8B2yDHM4wRDAYCfLrk2Z-lvxjVeTjJWKzThUM1A6pBjdTQZof9yk6QK6mRpiCFgzLIRS-s1-zAFKmHznkU6o0Hq6sYG4rVOMq_1klt5F74-Wcj-LOLPvJmSnJ6-tZFtqT6CCLZgqM0UIEC2FBQNZw2MhrlIRHNmBR1-6RPmfSRyv26ATB4V4kI-27sYZwaqNmyQtnfyRowNwpq3d0oc0DMa1EZGUr0dgv_6ycp3WzsQjcY00xcHCZ0_yjZP6dPaL36OFAnus71S_9BNzKtc-Ic3HPh8OUUlXqZkoki_TPtyr7BukexljqXbmgGp8_g4bezQY5iqxVZZ_0i0
 
